@@ -1,3 +1,3 @@
 module github.com/github-action-demo
 
-go 1.20
+go 1.19
