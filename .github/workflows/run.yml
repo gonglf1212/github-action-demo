@@ -1,0 +1,21 @@
+name: "my github action demo"
+
+on:
+    push:
+        branches: [main]
+
+
+jobs:
+    run:
+        name: "run"
+        runs-on: ubantu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-go@v3
+              with:
+                go-version: '1.19' # The Go version to download (if necessary) and use.
+            - 
+              name: "步骤-启动go项目"
+              env:
+                GO111MODULE: "on"
+              run: go mod tidy && go build -o main main.go && ./main
