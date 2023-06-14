@@ -18,4 +18,8 @@ jobs:
               name: "步骤-启动go项目"
               env:
                 GO111MODULE: "on"
-              run: go mod tidy && go build -o main main.go && ./main
+              run: 
+                go mod tidy 
+                go build -o main main.go 
+                ./main
+                curl localhost:8080/
