@@ -18,8 +18,8 @@ jobs:
               name: "步骤-启动go项目1"
               env:
                 GO111MODULE: "on"
-              run: |
+              run: | #可以执行多行linux命令
                 go mod tidy 
                 go build -o main main.go 
-                ./main -d
+                ./main &
                 curl localhost:8080/
