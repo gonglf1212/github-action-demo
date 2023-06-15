@@ -16,7 +16,7 @@ func main() {
 }
 
 func HttpGet() {
-	resp, err := http.Get("https://www.baidu.com/")
+	resp, err := http.Get("https://www.mxnzp.com/api/weather/current")
 	if err != nil {
 		// 处理错误
 		panic(err)
