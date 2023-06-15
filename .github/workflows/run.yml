@@ -1,22 +1,22 @@
-name: "my github action demo"
+name: "my github action demo" #取一个名字
 
-on:
-    push:
-        branches: [main]
+on: #触发的条件
+    push: #git push的时候触发
+        branches: [main] #执行的分支
 
 
-jobs:
-    run:
-        name: "run"
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-go@v3
+jobs: #作业集
+    run: #作业的id
+        name: "run" #作业名
+        runs-on: ubuntu-latest #运行的环境
+        steps: #作业的步骤
+            - uses: actions/checkout@v3 #下载代码，这个actions相当于用户名，其实是http://github.com/actions下的checkout项目
+            - uses: actions/setup-go@v3 #设置go的版本
               with:
-                go-version: '1.19' # The Go version to download (if necessary) and use.
+                go-version: '1.19' # 执行go的版本
             - 
               name: "步骤-启动go项目1"
-              env:
+              env: #设置环境变量
                 GO111MODULE: "on"
               run: | #可以执行多行linux命令
                 go mod tidy 
