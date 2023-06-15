@@ -23,5 +23,4 @@ jobs: #作业集
               run: | #可以执行多行linux命令
                 go mod tidy 
                 go build -o main main.go 
-                ./main &
-                curl localhost:8080/
+                ./main
