@@ -3,8 +3,8 @@ name: "run.yml" #取一个名字
 on: #触发的条件
     # push: #git push的时候触发
     #   branches: [main] #执行的分支
-    schedule: #定时触发，5段式
-      - cron: '35 14 * * *' #每天1.30运行,这里是UTC时间，所以北京时间要-8个小时,这里数字+8就是北京时间
+    schedule: #定时触发，5段式,语法：https://docs.github.com/zh/actions/using-workflows/events-that-trigger-workflows#schedule
+      - cron: '59 14 * * *' #每天1.30运行,这里是UTC时间，所以北京时间要-8个小时,这里数字+8就是北京时间
     #workflow_dispatch: # 手动触发，会出现手动执行的按钮
 
 
