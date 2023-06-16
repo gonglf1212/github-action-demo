@@ -1,16 +1,16 @@
 name: "run.yml" #取一个名字
 
 on: #触发的条件
-    #push: #git push的时候触发
-    #   branches: [main] #执行的分支
+    push: #git push的时候触发
+      branches: [main] #执行的分支
     #schedule: #定时触发，5段式
     #  - cron: '*/10 * * * *' #每10秒运行一次
-    workflow_dispatch: # 手动触发
+    #workflow_dispatch: # 手动触发
 
 
 jobs: #作业集
     run: #作业的id
-        name: "run" #作业名
+        name: "跑go项目" #作业名
         runs-on: ubuntu-latest #运行的环境
         steps: #作业的步骤
             - uses: actions/checkout@v3 #下载代码，这个actions相当于用户名，其实是http://github.com/actions下的checkout项目
