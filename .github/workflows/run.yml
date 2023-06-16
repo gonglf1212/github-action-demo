@@ -1,4 +1,4 @@
-name: "my github action demo" #取一个名字
+name: "run.yml" #取一个名字
 
 on: #触发的条件
     #push: #git push的时候触发
